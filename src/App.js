@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+// 引入依赖
+import React,{Component} from "react"
+// 引入css样式
+import "../src/App.css"
+// 编写类组件
+export default class App extends Component{
+  render(){
+    let titles = ["Pull request","Issues","Marketplace","Explore"]
+    return <div>
+      <ul>
+        {titles.map((v,i)=><li key={i}>{v}</li>)}
+      </ul>
     </div>
-  );
+  }
 }
-
-export default App;
